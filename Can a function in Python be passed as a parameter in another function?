@@ -1,0 +1,10 @@
+mylist = ['zero', 'one', 'two', 'three', 'four', 'six']
+ss = sorted(mylist, key=len)
+print(*ss)
+
+def do_something(func, arg):
+    return func(arg)
+print(do_something(len, 'hello'))
+a = do_something(len, 'hello')
+print(a)
+
