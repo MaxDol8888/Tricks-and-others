@@ -1,0 +1,32 @@
+def reverse_a_string(s):
+    return s[::-1]
+
+rev = reverse_a_string
+print(rev('hello'))
+
+
+def reverse_a_string(s):
+    return s[::-1]
+
+rev = reverse_a_string
+
+aa = ['lemon', 'guava', 'fig']
+for x in aa:
+    print(rev(x))
+    
+    
+''' We can further use the function reference as a parameter to another function:
+
+>>> sorted(('lemon', 'guava', 'fig'), key=rev)
+['guava', 'fig', 'lemon']
+By writing key=rev, we passed the function reference in as the sort key,
+causing the built-in sorted function to emit a list 
+which is sorted by the reverse of the strings (‘avaug’, ‘gif’, ‘nomel’).
+
+If I stop here, someone will invariably point out that we didn’t really need a named function to accomplish that,
+we could’ve used a lambda (which is an anonymous function), like so:
+
+>>> sorted(('lemon', 'guava', 'fig'), key=lambda s: s[::-1])
+['guava', 'fig', 'lemon']
+…but of course, we’re now digressing from the original question.
+'''
